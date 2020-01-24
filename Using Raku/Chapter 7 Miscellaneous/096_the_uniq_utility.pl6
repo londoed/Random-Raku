@@ -10,5 +10,5 @@ my %seen;
 while (my $line = $*IN.get) {
   next if %seen{$line};
   say $line;
-  %sen{$line} = 1;
+  %seen{$line} = 1;
 }
