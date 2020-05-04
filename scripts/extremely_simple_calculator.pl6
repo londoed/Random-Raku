@@ -10,79 +10,79 @@ sub addition() {
   say "Addition";
 
   my $n = prompt("Enter a number: ").Rat;
-  my $t = 0;
+  my $count = 0;
   my $ans = 0.0;
 
   while $n != 0 {
     $ans += $n;
-    $t++
+    $count++
     $n = prompt("Enter another number (0 to calculate): ").Rat;
   }
 
-  return ($ans, $t);
+  return ($ans, $count);
 }
 
 sub subtraction() {
   say "Subtraction";
 
   my $n = prompt("Enter a number: ").Rat;
-  my $t = 0;
+  my $count = 0;
   my $sum = 0.0;
 
   while $n != 0 {
     $ans -= $n;
-    $t++;
+    $count++;
     $n = prompt("Enter another number (0 to calculate): ").Rat;
   }
 
-  return ($ans, $t);
+  return ($ans, $count);
 }
 
 sub multiplication() {
   say "Multiplication";
 
   my $n = prompt("Enter a number: ").Rat;
-  my $t = 0;
+  my $count = 0;
   my $ans = 1;
 
   while $n != 0 {
     $ans *= $n;
-    $t++;
+    $count++;
     $n = prompt("Enter another number (0 to calculate): ");
   }
 
-  return ($ans, $t);
+  return ($ans, $count);
 }
 
 sub division() {
   say "Division";
 
   my $n = prompt("Enter a number: ").Rat;
-  my $t = 0;
+  my $count = 0;
   my $m = prompt("Enter another number (0 to calculate): ").Rat;
   my $ans = $n;
 
   while $n != 0 && $m != 0 {
     if $ans == $n {
       $ans = $n / $m;
-      $t++;
+      $count++;
       $n = prompt("Enter another number (0 to calculate): ").Rat;
     } else {
       $ans /= $n;
-      $t++;
+      $count++;
       $n = prompt("Enter another number (0 to calculate): ").Rat;
     }
   }
 
-  return ($ans, $t);
+  return ($ans, $count);
 }
 
 sub average() {
   my $an = addition();
-  my $t = $an[1];
+  my $count = $an[1];
   my $a = $an[0];
-  my $ans = $a / $t;
-  return ($ans, $t)
+  my $ans = $a / $count;
+  return ($ans, $count);
 }
 
 sub MAIN() {
