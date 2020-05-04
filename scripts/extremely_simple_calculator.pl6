@@ -60,7 +60,7 @@ sub division() {
   my $n = prompt("Enter a number: ").Rat;
   my $t = 0;
   my $m = prompt("Enter another number (0 to calculate): ").Rat;
-  my Rat $ans;
+  my $ans = $n;
 
   while $n != 0 && $m != 0 {
     if $ans == $n {
